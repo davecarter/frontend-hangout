@@ -7,7 +7,10 @@
   "main": "js/reveal.js",
   "scripts": {
     "test": "grunt test",
-    "start": "grunt serve"
+    "start": "grunt serve",
+    "lint": "npm run lint:eslint && npm run lint:sass",
+    "lint:eslint": "eslint --ext=.js --ext=.jsx ./src/ ./test/ ./docs/",
+    "lint:sass": "scss-lint src/"
   },
   "author": {
     "name": "David Garcia",
@@ -21,10 +24,6 @@
   "engines": {
     "node": "4.2.1"
   },
-
-  "pre-commit": [
-    "lint"
-  ],
 
   "dependencies": {
     "underscore": "~1.5.1",
