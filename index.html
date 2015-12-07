@@ -45,27 +45,149 @@
 					<h4>To serve & Protect the Quality of your code</h4>
 					<img src="img/FPR_badge.png" width="300" alt="">
 					<p>
-						<small>por <a href="http://davecarter.me">David García</a> / <a href="http://twitter.com/d4vecarter">@d4vecarter</a></small>
+						<small>por <a href="http://davecarter.me" target="_blank">David García</a> / <a href="http://twitter.com/d4vecarter" target="_blank">@d4vecarter</a></small>
 					</p>
 				</section>
 
-        <section id="fragments">
+        <section>
             <h3>¿Para qué sirven?</h3>
             <p class="fragment">Mejorar la <span class="marker">calidad del código</span> en un equipo.</p>
             <p class="fragment"><span class="marker">Normalizar</span> el estilo y las buenas prácticas personales.</p>
         </section>
 
-        <section id="fragments">
+        <section>
+          <h3>¿Qué es lo que sientes al usarlas por primera vez?</h3>
+          <img class="fragment" src="img/comic-strip.jpg" alt="">
+        </section>
+
+        <section>
+          <h3>¿Cómo evitarlo?</h3>
+          <p class="fragment">Conociendo las reglas</p>
+          <p class="fragment">Usando plugins de linting</p>
+          <small class="fragment">¿Qué es el <a href="https://es.wikipedia.org/wiki/Lint" target="_blank">Linting</a>?</small>
+        </section>
+
+
+        <section>
 		        <h3>¿Cual elegir?</h3>
             <p class="fragment">No existe una fórmula mágica.</p>
             <p class="fragment">Consensuar reglas entre miembros del equipo.</p>
+            <small class="fragment"><a href="https://github.com/airbnb/javascript" target="_blank">Airbnb JavaScript Style Guide</a></small>
 		    </section>
 
-        <section id="fragments">
+        <section>
             <h3>¿Cómo funcionan?</h3>
             <p class="fragment">Precommit Hook.</p>
             <p class="fragment">Otros tipos: Pre-Push Hook [...]</p>
             <small class="fragment">Más información sobre <a href="http://githooks.com/">Git Hooks</a></small>
+        </section>
+
+        <section>
+            <h3>¿Cómo añado las <span class="marker">Frontend Pre-commit Rules</span> a mi proyecto?</h3>
+            <p class="fragment">- Ejemplo práctico:</p>
+        </section>
+
+        <section>
+          <h3>Inicializa tu proyecto</h3>
+          <p>- Crea una carpeta local</p>
+          <pre>
+          <code data-trim contenteditable class=" hljs javascript hljs">
+$ mkdir my-project
+$ cd my-project
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Inicializa  Git</h3>
+          <pre>
+          <code data-trim contenteditable class=" hljs javascript hljs">
+$ my-project > git init
+$ touch .gitignore
+& git remote add origin [...]
+          </code></pre>
+          <small>Crear archivo <a href="https://www.gitignore.io" target="_blank">.gitignore</a></small>
+        </section>
+
+        <section>
+          <h3>Inicializa  NPM</h3>
+          <pre>
+          <code data-trim contenteditable class=" hljs javascript hljs">
+$ my-project > npm init
+[...]
+
+// Añadimos Frontend Pre-commit Rules:
+$ npm i @schibstedspain/frontend-pre-commit-rules --save-dev
+          </code></pre>
+          <small>Más info: <a href="https://www.npmjs.com/package/@schibstedspain/frontend-pre-commit-rules" target="_blank">Frontend Pre-commit Rules</a></small>
+        </section>
+
+        <section>
+          <h3>Añadimos dependencias de linters</h3>
+          <pre>
+          <code data-trim contenteditable class=" hljs javascript hljs">
+// Añadimos Frontend Pre-commit Rules:
+$ npm i eslint eslint-plugin-react babel-eslint node-sass --save-dev
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Pre-commit hook</h3>
+          <p>En el <span class="marker">package.json</span> añadimos:</p>
+          <pre>
+          <code data-trim contenteditable class=" hljs javascript hljs">
+// Pre-commit hook:
+"pre-commit": [
+  "lint"
+]
+
+// Scripts de linting:
+"lint": "npm run lint:eslint && npm run lint:sass",
+"lint:eslint": "eslint --ext=.js --ext=.jsx ./src/",
+"lint:sass": "scss-lint src/"
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Archivos /src</h3>
+           <pre>
+          <code data-trim contenteditable class=" hljs javascript hljs">
+src/index.js
+src/index.scss
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Commitear cambios</h3>
+          <img class="fragment" src="img/zas.jpg" alt="">
+        </section>
+
+        <section>
+          <h3>Ejecutar scripts de linting</h3>
+          <pre>
+          <code data-trim contenteditable class=" hljs javascript hljs">
+// JavaScript y Sass:
+$ npm run lint
+
+// Sólo JavaScript:
+$ npm run lint:eslint
+
+// Sólo Sass:
+$ npm run lint:sass
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Sublime Text Linting Plugins</h3>
+          <p><a href="http://www.sublimelinter.com/en/latest/" target="_blank">SublimeLinter</a></p>
+          <p>SublimeLinter-contrib-eslint</p>
+          <p>SublimeLinter-contrib-sass-lint - (Ruby Gem)</p>
+          <small><a href="https://github.com/SUI-Components/frontend-pre-commit-rules/tree/feature/eslintDoc#linter-installation" target="_blank">Más Información sobre la instalación</a></small>
+        </section>
+
+        <section>
+          <h3>Yeoman Generator</h3>
+          <p>Scaffolding de proyectos con Yeoman</p>
+          <small><a href="http://yeoman.io/" target="_blank">Yeoman</a></small>
         </section>
 
 			</div>
