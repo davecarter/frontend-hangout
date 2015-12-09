@@ -91,7 +91,7 @@
           <h3>Inicializa tu proyecto</h3>
           <p>- Crea una carpeta local</p>
           <pre>
-          <code data-trim contenteditable class=" hljs javascript hljs">
+          <code data-trim contenteditable class="javascript hljs">
 $ mkdir my-project
 $ cd my-project
           </code></pre>
@@ -100,10 +100,10 @@ $ cd my-project
         <section>
           <h3>Inicializa  Git</h3>
           <pre>
-          <code data-trim contenteditable class=" hljs javascript hljs">
-$ my-project > git init
+          <code data-trim contenteditable class="javascript hljs">
+$ git init
 $ touch .gitignore
-& git remote add origin [...]
+$ git remote add origin [...]
           </code></pre>
           <small>Crear archivo <a href="https://www.gitignore.io" target="_blank">.gitignore</a></small>
         </section>
@@ -111,8 +111,8 @@ $ touch .gitignore
         <section>
           <h3>Inicializa  NPM</h3>
           <pre>
-          <code data-trim contenteditable class=" hljs javascript hljs">
-$ my-project > npm init
+          <code data-trim contenteditable class="javascript hljs">
+$ npm init
           </code></pre>
         </section>
 
@@ -122,7 +122,7 @@ $ my-project > npm init
           <h3>Frontend Pre-commit Rules</h3>
           <p>by Schibsted Engineers</p>
           <pre>
-          <code data-trim contenteditable class=" hljs javascript hljs">
+          <code data-trim contenteditable class="javascript hljs">
 // Añadimos Frontend Pre-commit Rules:
 $ npm i @schibstedspain/frontend-pre-commit-rules --save-dev
           </code></pre>
@@ -133,7 +133,7 @@ $ npm i @schibstedspain/frontend-pre-commit-rules --save-dev
         <section>
           <h3>Añadimos dependencias de linters</h3>
           <pre>
-          <code data-trim contenteditable class=" hljs javascript hljs">
+          <code data-trim contenteditable class="javascript hljs">
 // Añadimos Frontend Pre-commit Rules:
 $ npm i eslint eslint-plugin-react babel-eslint node-sass --save-dev
           </code></pre>
@@ -143,7 +143,7 @@ $ npm i eslint eslint-plugin-react babel-eslint node-sass --save-dev
           <h3>Pre-commit hook</h3>
           <p>En el <span class="marker">package.json</span> añadimos:</p>
           <pre>
-          <code data-trim contenteditable class=" hljs javascript hljs">
+          <code data-trim contenteditable class="javascript hljs">
 // Pre-commit hook:
 "pre-commit": [
   "lint"
@@ -157,9 +157,9 @@ $ npm i eslint eslint-plugin-react babel-eslint node-sass --save-dev
         </section>
 
         <section>
-          <h3>Archivos /src</h3>
+          <h3>Punto entrada aplicación</h3>
            <pre>
-          <code data-trim contenteditable class=" hljs javascript hljs">
+          <code data-trim contenteditable class="javascript hljs">
 src/index.js
 src/index.scss
           </code></pre>
@@ -173,7 +173,7 @@ src/index.scss
         <section>
           <h3>Ejecutar scripts de linting</h3>
           <pre>
-          <code data-trim contenteditable class=" hljs javascript hljs">
+          <code data-trim contenteditable class="javascript hljs">
 // JavaScript y Sass:
 $ npm run lint
 
@@ -203,14 +203,31 @@ $ npm run lint:sass
 
         <section>
           <img src="img/sui-logo.jpg" width="100" alt="">
-          <img src="img/schibsted.png" width="100" alt="">
+          <img src="img/sui-engineers.jpg" width="100" alt="">
           <h3>Generator SUI React</h3>
           <p>by Schibsted Engineers</p>
           <pre>
-          <code data-trim contenteditable class=" hljs javascript hljs">
+          <code data-trim contenteditable class="javascript hljs">
 $ npm install -g @schibstedspain/generator-sui-react
           </code></pre>
-          <small><a href="https://github.com/SUI-Components/generator-sui-react/" target="_blank">Generator SUI React</a></small>
+          <small><a href="https://github.com/SUI-Components/generator-sui-react/" target="_blank">Generator SUI React</a></small><br />
+          <small><a href="https://twitter.com/SUIEngineers">@SUIEngineers</a></small>
+        </section>
+
+        <section>
+          <img src="img/sui-logo.jpg" width="100" alt="">
+          <img src="img/sui-engineers.jpg" width="100" alt="">
+          <h3>Generator SUI React</h3>
+          <p>Entorno de desarrollo con:</p>
+          <img src="img/logo_js.jpg" width="100" alt="">
+          <img src="img/logo_es6.jpg" width="100" alt="">
+          <img src="img/logo_babel.jpg" width="100" alt="">
+          <img src="img/logo_mocha.jpg" width="100" alt="">
+          <img src="img/logo_reactjs.jpg" width="100" alt="">
+          <img src="img/logo_sass.jpg" width="100" alt="">
+          <img src="img/logo_npm.jpg" width="100" alt="">
+          <img src="img/logo_webpack.jpg" width="100" alt="">
+
         </section>
 
 			</div>
